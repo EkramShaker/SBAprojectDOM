@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cake Wonderland</h1>
+        <p>Customize your cake just the way you like it!</p>
+    </header>
+
+    <section id="cake-selection">
+        <h2>Select Your Cake</h2>
+        <div class="cake-options">
+            <div class="cake-option">
+                <img src="https://inbloombakery.com/wp-content/uploads/2021/05/Chocolate-Berry-Cake-2-1.jpg" alt="Chocolate Cake">
+                <button onclick="selectCake('Chocolate Cake')">Chocolate Cake</button>
+            </div>
+            <div class="cake-option">
+                <img src="https://bakerstable.net/wp-content/uploads/2023/01/Funfetti-Cake-2023-34-e1673755695697-1024x1536.jpg" alt="Vanilla Cake">
+                <button onclick="selectCake('Vanilla Cake')">Vanilla Cake</button>
+            </div>
+            <div class="cake-option">
+                <img src="https://www.sobeys.com/wp-content/uploads/2021/03/Recipe_Classic_Red_Velvet_Cake.jpg" alt="Red Velvet Cake">
+                <button onclick="selectCake('Red Velvet Cake')">Red Velvet Cake</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="customization">
+        <h2>Customize Your Cake</h2>
+        <form id="cake-form">
+            <label for="flavor">Choose a flavor:</label>
+            <select id="flavor" name="flavor">
+                <option value="Chocolate">Chocolate</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Lemon">Lemon</option>
+            </select>
+
+            <label for="toppings">Choose toppings:</label>
+            <select id="toppings" name="toppings" multiple>
+                <option value="Sprinkles">Sprinkles</option>
+                <option value="Cherries">Cherries</option>
+                <option value="Chocolate Chips">Chocolate Chips</option>
+                <option value="Whipped Cream">Whipped Cream</option>
+            </select>
+
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+    </section>
+
+    <section id="order-summary">
+        <h2>Your Order</h2>
+        <div id="order-details"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
